@@ -90,6 +90,7 @@ predict_btn = st.button("🔮 Predict Risk", use_container_width=True)
 if predict_btn:
 
     # -------- 预测结果 --------
+    st.write(odel.predict_proba(X_input))
     prob = model.predict_proba(X_input)[0][1]
     pred = model.predict(X_input)[0]
 
@@ -146,3 +147,4 @@ if predict_btn:
         components.html(f.read(), height=300)
 
     os.remove(tmp_path)
+
