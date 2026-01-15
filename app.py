@@ -21,7 +21,7 @@ import streamlit.components.v1 as components
 # 2. 加载模型
 # =========================
 model = joblib.load("model.pkl")
-st.write(model)
+st.write(dir(model))
 features = list(model.feature_names_in_)
 
 explainer = shap.TreeExplainer(model)
@@ -148,6 +148,7 @@ if predict_btn:
         components.html(f.read(), height=300)
 
     os.remove(tmp_path)
+
 
 
 
