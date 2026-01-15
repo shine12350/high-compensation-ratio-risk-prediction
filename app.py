@@ -115,7 +115,6 @@ if predict_btn:
 
     shap_values = explainer.shap_values(X_input)
     base_value = explainer.expected_value
-
     shap_html = shap.plots.force(
         base_value[1],
         shap_values[0][:, 1],
@@ -146,6 +145,7 @@ if predict_btn:
         components.html(f.read(), height=300)
 
     os.remove(tmp_path)
+
 
 
 
