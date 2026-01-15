@@ -118,7 +118,7 @@ if predict_btn:
 
     shap_html = shap.plots.force(
         base_value[1],
-        shap_values[1][0],
+        shap_values[0][:, 1],
         feature_names=X_input.columns,
         matplotlib=False
     )
@@ -146,6 +146,7 @@ if predict_btn:
         components.html(f.read(), height=300)
 
     os.remove(tmp_path)
+
 
 
 
