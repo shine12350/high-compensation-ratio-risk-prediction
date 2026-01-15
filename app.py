@@ -126,7 +126,7 @@ if predict_btn:
     <head>{shap.getjs()}</head>
     <body>
         <div style="text-align:center; font-size:16px; font-weight:600;">
-            Contribution of each feature to the predicted high compensation risk
+            Contribution of each feature to the predicted high compensation ratio risk
         </div>
         {shap_html.html()}
     </body>
@@ -145,6 +145,7 @@ if predict_btn:
         components.html(f.read(), height=300)
 
     os.remove(tmp_path)
+
 
 
 
